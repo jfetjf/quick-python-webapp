@@ -1,4 +1,48 @@
 {
-	
-	
+  "id": "did:web:nanfortest.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:nanfortest.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://nanfortest.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/4ce95b5e-f52c-4853-87e1-9231009f890b"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#17df7c61b8d840a4913c73091fda5f0fvcSigningKey-f038f",
+      "controller": "did:web:nanfortest.com",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "IUdwatnPE_WaNH6w7DutbYgTs5BM2e6yoFcz1KxMDfA",
+        "y": "BTVT-hCd3vqAyA7q7lii3EJCKntpKxJXgQGqMpjifuo"
+      }
+    }
+  ],
+  "authentication": [
+    "#17df7c61b8d840a4913c73091fda5f0fvcSigningKey-f038f"
+  ],
+  "assertionMethod": [
+    "#17df7c61b8d840a4913c73091fda5f0fvcSigningKey-f038f"
+  ]
 }
