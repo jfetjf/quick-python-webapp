@@ -3,16 +3,6 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 app = Flask(__name__)
 
 
-@app.route('templates/.well-known/did.json')
-def did():
-   print('Request for did.json file received')
-   return render_template('did.json')
-   
-@app.route('templates/.well-known/did-configuration.json')
-def didconfiguration():
-   print('Request for did-configuration.json file received')
-   return render_template('did-configuration.json')
-
 @app.route('/')
 def index():
    print('Request for index page received')
